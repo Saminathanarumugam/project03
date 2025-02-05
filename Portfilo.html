@@ -1,0 +1,343 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Developer Dashboard</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      background-image: url('back.jpg');
+      background-size: cover;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #9ca3af;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #7c3aed;
+      color: white;
+      padding: 10px 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #9333ea;
+    }
+
+    .section {
+      margin: 30px 0;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #d4d4d8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #7c3aed;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #0f172a;
+      color: #9ca3af;
+    }
+
+    footer a {
+      color: #7c3aed;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #9333ea;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background: #7c3aed;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #9333ea;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #1e293b;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .nav-links a:hover {
+      color: #7c3aed;
+    }
+
+    /* Intro Section */
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .intro .text {
+      max-width: 50%;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+
+    .intro h3 {
+      font-size: 1.5rem;
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    .social-links a img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+
+    .social-links a img:hover {
+      transform: scale(1.1);
+    }
+
+    .intro .image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 50%;
+    }
+    #l{
+        color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+   
+  <div class="container">
+    
+    <header class="portfolio-header">
+        <nav class="navbar">
+          <div class="logo">Portfolio</div>
+          <ul class="nav-links">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact" class="btn-contact">Contact Me</a></li>
+          </ul>
+        </nav>
+        <div class="intro">
+          <div class="text">
+            <p>Hi, I am</p>
+            <h1>Saminathan Arumugam</h1>
+            <h3>FullStack Developer / Web Developer</h3>
+            <div class="social-links">
+              <a href="#"><img src="C:\Users\Windows\Desktop\Sami\emai1.png" alt="Email"></a>
+              <a href="#"><img src="C:\Users\Windows\Desktop\Sami\link.png" alt="linkedin"></a>
+              <a href="#"><img src="C:\Users\Windows\Desktop\Sami\whatsapp.png" alt="Whatsapp"></a>
+              <a href="#"><img src="C:\Users\Windows\Desktop\Sami\gitlab.png" alt="GitHub"></a>
+
+
+              
+            </div>
+          </div>
+          <div class="image">
+            <img src="C:\Users\Windows\Desktop\Sami\sami.jpg" alt="Tomasz Gajda">
+          </div>
+        </div>
+      </header>
+
+    <!-- About Section -->
+    <div class="section" id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am a passionate Full Stack Developer with expertise in building robust and scalable web applications. My goal is to deliver seamless user experiences and efficient backend systems. Let's collaborate and bring ideas to life!</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section" id="skills">
+      <h2>Skills Overview</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Frontend Development</h3>
+          <p>HTML5 | CSS3 | JavaScript | React.js | Bootstrap </p>
+          <p>Focus: Responsive Design, User Experience</p>
+        </div>
+        <div class="card">
+          <h3>Backend Development</h3>
+          <p>Python | Djanjo| SQL</p>
+          <p>Focus: API Development, Database Management,Efficient Backend Framework (with Django for rapid development)
+        </p>
+        </div>
+        <div class="card">
+          <h3>Full Stack Tools</h3>
+          <p>Git | Docker | RESTful Services</p>
+          <p>Focus: Streamlined Development Processes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+      <h2>Projects Overview</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>IRCTC Bus Ticket Booking App </h3>
+          <p>Technologies Used: Html5/CSS3, JavaScript (optional for interactivity)</p>
+          <p>Developed a web application, IRCTC BUS APP, to streamline bus ticket 
+            booking for travelers. Implemented search, booking, and payment 
+            functionalities to provide users with a seamless booking experience.Designed 
+            and implemented the user interface using HTML and CSS, ensuring a seamless 
+            user experience.</p>
+            <p>Link to Project: [<a href="https://github.com/Saminathanarumugam" id="l">GitHub </a> / Live Demo Link (if available)]</p>
+
+        </div>
+        <div class="card">
+          <h3>Student Enroll From</h3>
+          
+          <p>Frontend: Html5/Css3 ,Bootstrap</p>
+          <p>Developed an Enroll form for an online course details web application.
+            Designed and implemented the user interface using Bootstrap to ensure 
+            responsiveness and compatibility across devices. Integrated form validation to 
+            ensure accurate data collection and submission. Technologies used: HTML, 
+            CSS, Bootstrap, JavaScript. Successfully implemented a user-friendly enroll 
+            form, enhancing user experience and facilitating seamless course enrollment.</p>
+           <p>Link to Project: [<a href="https://github.com/Saminathanarumugam" id="l">GitHub </a> / Live Demo Link (if available)]</p>
+        </div>
+        <div class="card">
+          <h3>Personal Portfolio</h3>
+          <p>Technologies Used: HTML, CSS, JavaScript</p>
+
+          <p>Project Objective: Created a personal portfolio website to showcase technical skills, projects, and achievements. The portfolio highlights various web development projects, offering a clean, interactive, and user-friendly interface.</p>
+          <p>Link to Project: [<a href="https://github.com/Saminathanarumugam" id="l">GitHub </a> / Live Demo Link (if available)]</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me!</p>
+    <a href="https://www.linkedin.com/in/saminathan-a-3793571bb">LinkedIn</a>
+    <a href="https://github.com/Saminathanarumugam">GitHub</a>
+    <a href="mailto:asaminathan402@gmail.com">Email</a>
+  </footer>
+
+  <script>
+    // Interactive functionality can be added here if needed
+  </script>
+</body>
+</html>
